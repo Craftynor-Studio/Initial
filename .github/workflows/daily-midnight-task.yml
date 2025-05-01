@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Function Calling
         run: |
-          curl -I "https://fxedtygfdamzhcaovesy.supabase.co/storage/v1/object/sign/initial-bucket/qr-code-for-gmail.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InN0b3JhZ2UtdXJsLXNpZ25pbmcta2V5X2FiMjI3ODA2LTQ0MDYtNDlhMi1iMmEyLTYzYzE2NTMwMGJmNSJ9.eyJ1cmwiOiJpbml0aWFsLWJ1Y2tldC9xci1jb2RlLWZvci1nbWFpbC5wbmciLCJpYXQiOjE3NDYwOTE0NTcsImV4cCI6MTc3NzYyNzQ1N30.ukBTnR2adt0upcTnY64nva-bdpkhusNWOgpYBQAdkHs"
+          curl -I "https://fxedtygfdamzhcaovesy.supabase.co/storage/v1/object/sign/initial-bucket/qr-code-for-gmail.png?token=${{ secrets.TOKEN }}"
