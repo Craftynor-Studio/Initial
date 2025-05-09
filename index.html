@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Initial Page</title>
   <style>
-    /* Base styling for both light and dark themes */
     body {
       display: flex;
       justify-content: center;
@@ -19,21 +18,26 @@
     .content {
       font-size: 48px;
       font-weight: bold;
+      text-align: center;
     }
 
-    /* Light theme */
+    .content img {
+      display: block;
+      margin: 0 auto 16px;
+      max-width: 150px;
+      height: auto;
+    }
+
     body.light {
       background-color: #ffffff;
       color: #000000;
     }
 
-    /* Dark theme */
     body.dark {
       background-color: #121212;
       color: #ffffff;
     }
 
-    /* Media query to detect user preference */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #121212;
@@ -50,10 +54,12 @@
   </style>
 </head>
 <body>
-  <div class="content">Initial</div>
+  <div class="content">
+    <img src="/logo.png" alt="Logo">
+    Initial
+  </div>
 
   <script>
-    // Add the appropriate theme class to the body based on user preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.body.classList.add('dark');
     } else {
@@ -61,11 +67,11 @@
     }
   </script>
   <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(() => console.log('Service Worker registered'))
-      .catch(error => console.error('Service Worker registration failed:', error));
-  }
-</script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(error => console.error('Service Worker registration failed:', error));
+    }
+  </script>
 </body>
 </html>
