@@ -1,7 +1,8 @@
 const CACHE_NAME = 'offline-cache-v1';
 const URLS_TO_CACHE = [
   '/',
-  '/index.html'
+  '/index.html',
+  '/logo.png'
 ];
 
 // Install event – cache the index.html
